@@ -13,8 +13,7 @@ export class JoiValidationPipe implements PipeTransform{
 
         if (error){
             throw new BadRequestException({
-                message: 'Request validation failed',
-                details: error.message.replace(/("|\[|\d])/g, ""),
+                message: error.message.replace(/("|\[|\d|])/g, ""),
                 error: true
             });
         }

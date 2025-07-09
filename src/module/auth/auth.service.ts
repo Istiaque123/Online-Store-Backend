@@ -11,46 +11,46 @@ export class AuthService {
     }
 
     async register(registerDto: RegisterDto): Promise<ResponsePromiseTypes> {
-        try {
             const userResponse: AuthUser =  await this.authQuery.registerUser(registerDto);
 
+
             return ResponseTypes.SUCCESS(userResponse, 'User registered successfully');
-        }catch (error){
-            console.log(error);
-            return ResponseTypes.FAILED(null, error.message);
-        }
+        // }catch (error){
+        //     console.log(error);
+        //     return ResponseTypes.FAILED(null, error.message);
+        // }
     }
 
     async login(loginDto: LoginDto): Promise<ResponsePromiseTypes> {
-        try {
+        // try {
 
             return await this.authQuery.loginUser(loginDto);
 
-        }catch (error){
-            console.log(error);
-            return ResponseTypes.FAILED(null, error.message);
-        }
+        // }catch (error){
+        //     console.log(error);
+        //     return ResponseTypes.FAILED(null, error.message);
+        // }
     }
 
     async refreshToken(refreshTokenDto: RefreshTokenDto): Promise<ResponsePromiseTypes> {
-        try {
+        // try {
 
             return await this.authQuery.refreshTokens(refreshTokenDto.refreshToken);
 
-        }catch (error){
-            console.log(error);
-            return ResponseTypes.FAILED(null, error.message);
-        }
+        // }catch (error){
+        //     console.log(error);
+        //     return ResponseTypes.FAILED(null, error.message);
+        // }
     }
 
     async logout(user_id: string): Promise<ResponsePromiseTypes> {
-        try {
+        // try {
             return await this.authQuery.logoutUser(user_id);
-        }
-        catch (error){
-            console.log(error);
-            return ResponseTypes.FAILED(null, error.message);
-        }
+        // }
+        // catch (error){
+        //     console.log(error);
+        //     return ResponseTypes.FAILED(null, error.message);
+        // }
     }
 
 

@@ -9,7 +9,7 @@ import {
 } from "typeorm";
 import {AuthUser} from "./authUser.entity";
 
-@Entity()
+@Entity('login_info')
 export class LoginInfoEntity{
     @PrimaryGeneratedColumn('uuid')
     id:string;

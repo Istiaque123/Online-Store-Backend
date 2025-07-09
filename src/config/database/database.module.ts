@@ -2,6 +2,8 @@ import { Module } from '@nestjs/common';
 import {TypeOrmModule} from "@nestjs/typeorm";
 import * as process from "node:process";
 import {config} from "dotenv";
+import {AuthUser} from "../../module/auth/entities";
+import {LoginInfoEntity} from "../../module/auth/entities/loginInfo.entity";
 config();
 
 @Module({
@@ -13,7 +15,7 @@ config();
             username: process.env.DB_USERNAME,
             password: process.env.DB_PASSWORD,
             database: process.env.DB_NAME,
-            entities: [],
+            entities: [AuthUser, LoginInfoEntity],
             synchronize: true,
             // logging: true,
         }),

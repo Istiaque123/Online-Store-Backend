@@ -47,6 +47,7 @@ export class AuthQuery {
             email: registerDto.email,
             password: hashedPassword,
             role: registerDto.role,
+            updatedAt: null
         });
 
         if (!newUser) {
