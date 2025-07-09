@@ -15,7 +15,7 @@ import {AuthService} from "./auth.service";
 import {JoiValidationPipe} from "../../core/pipes";
 import {LoginSchema, LogoutSchema, RefreshTokenSchema, RegisterSchema} from "./schema";
 import {Request, Response} from "express";
-import {ResponsePromiseTypes, ResponseTypes} from "../../common/response";
+import {ResponsePromiseTypes, ResponseTypes} from "../../common/filters";
 import {JwtAuthGuard} from "../../core/guards";
 
 @Controller('auth')

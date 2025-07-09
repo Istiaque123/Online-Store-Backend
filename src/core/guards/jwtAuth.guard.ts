@@ -1,6 +1,6 @@
 import {CanActivate, ExecutionContext, HttpException, HttpStatus, Injectable} from "@nestjs/common";
 import {Observable} from "rxjs";
-import {ResponseTypes} from "../../common/response";
+import {ResponseTypes} from "../../common/filters";
 import * as jwt from "jsonwebtoken";
 import {config} from "dotenv";
 import * as process from "node:process";

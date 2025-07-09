@@ -1,7 +1,7 @@
 import {Inject, Injectable} from '@nestjs/common';
 import {AuthQuery} from "./auth.query";
 import {LoginDto, RefreshTokenDto, RegisterDto} from "./dto";
-import {ResponsePromiseTypes, ResponseTypes} from "../../common/response";
+import {ResponsePromiseTypes, ResponseTypes} from "../../common/filters";
 import {AuthUser} from "./entities";
 
 @Injectable()

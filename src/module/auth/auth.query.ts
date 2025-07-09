@@ -3,7 +3,7 @@ import {InjectRepository} from "@nestjs/typeorm";
 import {AuthUser} from "./entities";
 import {Repository} from "typeorm";
 import {LoginDto, RegisterDto, TokenPayloadDto} from "./dto";
-import {ResponsePromiseTypes, ResponseTypes} from "../../common/response";
+import {ResponsePromiseTypes, ResponseTypes} from "../../common/filters";
 import {ROLE} from "../../common/enums";
 import * as bcrypt from "bcrypt";
 import * as process from "node:process";
