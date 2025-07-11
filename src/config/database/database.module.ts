@@ -4,6 +4,7 @@ import * as process from "node:process";
 import {config} from "dotenv";
 import {AuthUser} from "../../module/auth/entities";
 import {LoginInfoEntity} from "../../module/auth/entities/loginInfo.entity";
+import {Users} from "../../module/users/entities";
 config();
 
 @Module({
@@ -15,7 +16,11 @@ config();
             username: process.env.DB_USERNAME,
             password: process.env.DB_PASSWORD,
             database: process.env.DB_NAME,
-            entities: [AuthUser, LoginInfoEntity],
+            entities: [
+                AuthUser,
+                LoginInfoEntity,
+                Users
+            ],
             synchronize: true,
             // logging: true,
         }),

@@ -3,7 +3,7 @@ import {
     CreateDateColumn,
     Entity,
     JoinColumn,
-    ManyToMany,
+    ManyToOne,
     PrimaryGeneratedColumn,
     UpdateDateColumn
 } from "typeorm";
@@ -17,8 +17,8 @@ export class LoginInfoEntity{
     @Column()
     token:string;
 
-    @ManyToMany(
-        () => AuthUser, {
+    @ManyToOne(
+        ():typeof AuthUser => AuthUser, {
             onDelete: 'CASCADE'
         })
     @JoinColumn({
