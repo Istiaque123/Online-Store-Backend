@@ -5,6 +5,7 @@ import {config} from "dotenv";
 import {AuthUser} from "../../module/auth/entities";
 import {LoginInfoEntity} from "../../module/auth/entities/loginInfo.entity";
 import {Users} from "../../module/users/entities";
+import {OtpEntity} from "../../module/otp/entities";
 config();
 
 @Module({
@@ -19,7 +20,8 @@ config();
             entities: [
                 AuthUser,
                 LoginInfoEntity,
-                Users
+                Users,
+                OtpEntity
             ],
             synchronize: true,
             // logging: true,
